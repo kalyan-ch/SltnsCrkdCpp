@@ -2,38 +2,10 @@
 #include "LinkedList.h"
 using namespace std;
 
-Node* getReverse(Node* node, LinkedList* llRev){
-
-	if(node->next == NULL){
-		return node;
-	}
-	Node* n = getReverse(node->next, llRev);
-	llRev->addNode(n->data);
-
-	return node;
-
-}
-
 bool isPlnDrm(Node* head){
-	bool flag = true;
+	bool flag = false;
 
-	//get reverse of list
-	LinkedList* llRev = new LinkedList();
-	getReverse(head, llRev);
-    llRev->addNode(head->data);
 	
-	//verify if same as original
-	Node* n = head;
-	Node* n1 = llRev->head; 
-    
-    while(n!=NULL && n1!=NULL){
-    	if(n->data!=n1->data){
-    		flag = false;
-    	}
-    	n = n->next;
-    	n1 = n1->next;
-    }
-
 	return flag;
 }
 

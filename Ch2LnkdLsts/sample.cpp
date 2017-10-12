@@ -1,17 +1,21 @@
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
-int recursEx(int num){
-    if(num==0){
-        return 0;
-    }
-    recursEx(num-1);
-	cout << "number now: " << num << "\n";
-	return num-1;
+int pop(vector<int> *v){
+	int num = v->back();
+	return num;
 }
 
 int main(){
-	recursEx(10);
+	vector<int> v;
+
+	for (int i = 0; i <= 9; ++i){
+		v.push_back(i);
+	}
+	for (int i = 0; i <= 9; ++i){
+		cout<<pop(&v)<<endl;
+	}
 	return 0;
 }
