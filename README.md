@@ -40,4 +40,8 @@ Always try to get a solution with O(N) time complexity within O(1) space
 
 6. To check if a linked list is a cycle, see if a node has been visited more than once. To know at which node the loop starts we can use two pointers. The pointers, one moving twice the speed of the other, to see if there is a collision of nodes. When there is a collision move the slower pointer to the head and move both the pointers at the same pace. They should meet at the beginning of the loop
 
+7. It helps to think about the list in a linear way. Counting the nodes from start and end will help you solve some problems.
+
+8. Using two pointers can be very useful
+
 
