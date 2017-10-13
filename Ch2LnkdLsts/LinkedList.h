@@ -29,8 +29,34 @@ class LinkedList
 					}
 					n = n->next;
 				}
-				
 			}
+		}
+
+		void createCycle(){
+			Node* randN = getRandomNode();
+			Node* n = head;
+			
+			while(true){
+				if(n->next == NULL){
+					n->next = randN;
+					break;
+				}
+				n = n->next;
+			}
+		}
+
+		Node* getRandomNode(){
+			Node* n = head;
+			int cnt = 0;
+			while(n!=NULL){
+				if(cnt == (rand()%8+1)){
+					break;
+				}
+				n = n->next;
+				cnt++;
+			}
+
+			return n;
 		}
 
 		int listLength(){
