@@ -12,8 +12,25 @@ def pop_stack():
 
 def isPalindrome():
 	
-	pass
+	fast = ll.head
+	slow = ll.head
+	flag = True
+	while (fast and fast.next):
+		stack.append(slow.data)
+		slow = slow.next
+		fast = fast.next.next
 
+	if fast:
+		slow = slow.next
+
+	while slow:
+		if pop_stack() != slow.data:
+			flag = False
+			break
+		slow = slow.next
+
+
+	return flag
 
 if __name__ == '__main__':
 	
@@ -28,5 +45,5 @@ if __name__ == '__main__':
 	
 	ll.printList()
 
-	isPalindrome()
+	print "is the list a palindrome?",isPalindrome()
 
