@@ -10,7 +10,7 @@ Here are some tricks I learned while solving problems, as well as ones in the bo
 ## Tricks I learned
 
 ## Rule of thumb
-Always try to get a solution with 
+Always try to get a solution with O(N) time complexity within O(1) space
 
 ### Chapter 1 - Strings and Arrays
 
