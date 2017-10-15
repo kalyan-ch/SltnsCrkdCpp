@@ -1,3 +1,5 @@
+#implement a queue with two stacks
+
 from QueWStcks import NewQueue
 from random import randint
 
