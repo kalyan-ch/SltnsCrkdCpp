@@ -7,6 +7,10 @@ Rant Over.
 
 Here are some tricks I learned while solving problems, as well as ones in the book. Listing them chapter wise
 
+## Codefights
+
+I am simultaneously solving problems from Codefights interview track so I can apply the concepts I have learned. The challenges are in the folder CdFtsIntQ
+
 ## Tricks I learned
 
 ## Rule of thumb
@@ -43,5 +47,7 @@ Always try to get a solution with O(N) time complexity within O(1) space
 7. It helps to think about the list in a linear way. Counting the nodes from start and end will help you solve some problems.
 
 8. Using two pointers can be very useful
+
+### Chapter 3 - Stacks
 
 
