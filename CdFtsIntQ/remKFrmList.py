@@ -1,17 +1,23 @@
 
-class ListNode(object):
-  def __init__(self, x):
-    self.value = x
-    self.next = None
-
 def removeKFromList(l, k):
-    n = l
-    while n:
+    if not l:
+        return None
+    
+    if l.value == k:
+        l = l.next
+    
+    
+    if not l.next:
+        if n.value == k:
+            n = n.next
+        
+        return n
+    
+    while n.next:
         if n.next.value == k:
-            pass
-        n = n.next
+            n.next = n.next.next
+        else:
+            n = n.next
 
-
-if __name__ == '__main__':
-    l = ListNode(10)
-    print l.value
+    return l
+    
