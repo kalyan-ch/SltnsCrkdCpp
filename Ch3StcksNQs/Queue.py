@@ -6,10 +6,14 @@ class Queue(object):
 	def push(self,data):
 		self.dtList.append(data)
 
+	def peek(self):
+		return self.dtList[0]
+
 	def pop(self):
 		temp = self.dtList[0]
 		del self.dtList[0]
 		return temp
+
 	def printQ(self):
 		for x in self.dtList:
 			print x,

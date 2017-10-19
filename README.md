@@ -48,6 +48,23 @@ Always try to get a solution with O(N) time complexity within O(1) space
 
 8. Using two pointers can be very useful
 
+9. Recurse to reverse a linked list
+
 ### Chapter 3 - Stacks
+
+1. Stacks are useful to reverse lists - Two Stacks help form a queue
+
+2. Two stacks can be used to sort a list of numbers
+
+3. Arrays can be used to build stacks
+
+4. To get the minimum of elements is a stack, maintain a variable that constantly checks for min values as soon as a value is pushed
+
+
+### Chapter 4 - Trees and Graphs
+
+
+
+
 
 
