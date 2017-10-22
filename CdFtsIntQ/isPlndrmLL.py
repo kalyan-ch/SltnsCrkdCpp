@@ -21,7 +21,7 @@ def isListPalindrome(l):
         lnth+=1
         n = n.next
     
-    return isPalRecurse(l, lnth)
+    return isPalRecurse(l, lnth).result
     
     
 def isPalRecurse(nd, lnth):
@@ -33,13 +33,13 @@ def isPalRecurse(nd, lnth):
 		r = Result(nd.next,True)
 		return r
 
-	res = isPalRecurse(nd.next, ln-2)
+	res = isPalRecurse(nd.next, lnth-2)
 
-	if (not res.result) || (not res.node):
+	if (not res.result) or (not res.node):
 		return res
 
 
-	res.result = (head.value == res.node.value)
+	res.result = (nd.value == res.node.value)
 
 	res.node = res.node.next;
 
