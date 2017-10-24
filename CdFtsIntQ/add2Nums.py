@@ -31,27 +31,22 @@ def addTwoHugeNumbers(a, b):
 
     arr = []
     n = len(res)
-    rn = len(res)/4 + len(res)%4
 
-    for x in range(rn)[::-1]:
-        end = 4*(i-1)+1
-        start = 4*(i-2)+1
-
-        if i == 0:
-            pass
-        else:
-            arr.append(int(res[start:end]))
-
-
-    print res,arr
+    for x in xrange(n,-1,-4):
+        end = x
+        start = x-4
+        
+        if start < 0:
+            start = 0
+        if end > 0:
+            num = res[start:end]
+            arr.append(int(num))
 
 
-
-
-    r = ListNode(int(arr[0]))
+    r = None
     
-    for x in arr[1:]:
-        if x!= "":
+    for x in arr[::-1]:
+        if r:
             node = ListNode(int(x))
             n = r
             while True:
@@ -60,6 +55,9 @@ def addTwoHugeNumbers(a, b):
                     break
 
                 n = n.next
+        else:
+            r = ListNode(int(x))
+        
 
 
     return r
