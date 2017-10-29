@@ -45,8 +45,12 @@ class MinHeap(object):
 		par_ele = self.heap[parent]
 		curr_ele = self.heap[ind]
 		
+		#as long as parent exists and parent is greater than current (out of order) run loop 
 		while (parent >=0) and ( par_ele > curr_ele ) :
+			#swap elements current and parent
 			self.swap(parent,ind)
+
+			#update all variables
 			ind = parent
 			parent = self.getprntInd(ind)
 			par_ele = self.heap[parent]

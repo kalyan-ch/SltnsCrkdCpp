@@ -1,0 +1,3 @@
+
+def countClouds(skyMap):
+    pass

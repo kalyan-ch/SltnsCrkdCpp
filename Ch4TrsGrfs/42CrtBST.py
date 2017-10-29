@@ -6,6 +6,12 @@ def inorder(node):
 		print node.value,
 		inorder(node.right)
 
+def preorder(node):
+	if node:
+		print node.value,
+		preorder(node.left)		
+		preorder(node.right)
+
 def createBST(arr,start,end):
 	
 	if end < start:
@@ -22,11 +28,13 @@ def createBST(arr,start,end):
 
 
 
-arr =  [x for x in range(11,25)]
+arr =  [x for x in range(10)]
 print arr
 
 root = createBST(arr,0,len(arr)-1)
 
 inorder(root)
+print ""
+preorder(root)
 print ""
 
