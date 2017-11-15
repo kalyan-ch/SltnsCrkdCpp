@@ -13,9 +13,8 @@ Node* kthEle(Node* head, int k){
 			return NULL;
 		}
 		p1 = p1->next;
-		cout<<p1->data<<endl;
 	}
-
+	cout << p1 -> data << endl;
 	while(p1!=NULL){
 		p1 = p1->next;
 		p2 = p2->next;

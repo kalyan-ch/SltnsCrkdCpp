@@ -1,12 +1,20 @@
-from minHeap import MinHeap
-from random import randint
-mh = MinHeap()
-arr = []
-for x in range(20):
-	num = randint(1,100)
-	mh.insert(num)
-	arr.append(num)
+import datetime
 
-mh.printHeap()
-print mh.extract_min()
-mh.printHeap()
+def time_this(original_function):
+    def new_function(*args,**kwargs):
+    	print args, kwargs
+        before = datetime.datetime.now()  
+        x = original_function(*args,**kwargs) 
+        after = datetime.datetime.now()  
+        print "Elapsed Time = {0}".format(after-before)
+        return x
+    return new_function()
+
+
+
+def addNums(a,b):
+	return a+b
+
+addNums = time_this(addNums)
+
+print addNums(2,3)
