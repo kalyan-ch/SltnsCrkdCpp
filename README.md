@@ -65,6 +65,9 @@ Always try to get a solution with O(N) time complexity within O(1) space
 
 
 
+### Chapter 5 - Bit Manipulation
 
+
+### Chapter 6 - Math and Logic
 
 
