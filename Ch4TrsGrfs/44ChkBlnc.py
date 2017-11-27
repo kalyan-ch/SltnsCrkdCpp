@@ -6,13 +6,26 @@ from BT import BTNode
 def gtHeight(node):
 	if not node:
 		return -1
+	
+	lfHt = gtHeight(node.left)
+	if lfHt == -2:
+		return -2
+	
+	rtHt = gtHeight(node.right)
+	if rtHt == -2:
+		return -2
+
+	htDif = lfHt - rtHt
+
+	if abs(htDif) > 1:
+		return -2
+	else:
+		return max(lfHt,rtHt)+1
+	
 	return max([gtHeight(node.left),gtHeight(node.right)])+1
 
 def checkBalanced(root):
-	if not root:
-		return True
-
-	return gtHeight(root) != -1
+	return gtHeight(root) != -2
 
 
 def createBST(arr,start,end):

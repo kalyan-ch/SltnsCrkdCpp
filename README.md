@@ -63,7 +63,13 @@ Always try to get a solution with O(N) time complexity within O(1) space
 
 ### Chapter 4 - Trees and Graphs
 
+1. BFS and DFS are the most used algorithms in Trees to solve problems
 
+2. Recursive Traversal of tree is very useful for checking if conditions hold all over the tree
+
+3. Inorder traversal of Binary Search Tree is a sorted array of elements
+
+4. 
 
 
 
