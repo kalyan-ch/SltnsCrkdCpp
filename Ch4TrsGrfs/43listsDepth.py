@@ -21,7 +21,6 @@ def BFS(root):
 
 		this_level = next_level
 	
-
 	return result
 
 
