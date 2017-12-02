@@ -1,5 +1,5 @@
 
-def numWays(n, memo):
+def numWays(n):
 	a = 0
 	b = 1
 	c = 1
@@ -14,5 +14,4 @@ def numWays(n, memo):
 
 if __name__ == '__main__':
 	n = int(raw_input('Enter number of steps: '))
-	memo = [-1 for x in range(n+1)]
-	print numWays(n,memo)
+	print numWays(n)
