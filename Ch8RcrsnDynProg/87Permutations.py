@@ -1,4 +1,5 @@
-import copy
+
+#adds the character c to every position in each string of lst
 def addChar(lst,c):
 
 	rs = []
@@ -8,22 +9,23 @@ def addChar(lst,c):
 
 	return rs
 
+#idea - get permutations of s[:-1] and add s[-1] to each permutation
 def getAllPerms(s):
 	if not s:
 		return None
 
 	if len(s) == 1:
 		return [s[0]]
-
+	rs = []
 	res = getAllPerms(s[:-1])
-	rst = copy.deepcopy(res)
-	rs = addChar(rst,s[-1])
+	rs.extend(addChar(res,s[-1]))
 
 	return rs
 
+#test
 if __name__ == '__main__':
 	stri = ""
-	for x in (getAllPerms("wolfblade")):
+	for x in (getAllPerms("wolf")):
 		stri += x+" ,"
 
 	with open("res.txt","w") as f:
