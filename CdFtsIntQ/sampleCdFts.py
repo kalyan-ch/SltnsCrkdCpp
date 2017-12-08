@@ -1,14 +1,12 @@
-def isNByte(n):
-    i = 7
-    count = 0
-    while True:
-        mask = 1 << i
-        if n & mask == 0 or i == 0:
-            break
-        i -= 1
-        count += 1
+def getPrimes(number):
+    factors_list = []
+    i = 2   
+    while number>1:     
+        while number%i == 0:
+            factors_list.append(i)
+            number/=i
+        i+=1
     
-    return count
+    return factors_list
 
-
-print isNByte(255)
+print getPrimes(5)
