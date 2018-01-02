@@ -10,10 +10,9 @@ class Point(object):
 
 class Line(object):
 	def __init__(self,p1,p2):
+		
 		if p1.x > p2.x :
-			print p1,p2
 			p1,p2 = self.swap(p1,p2)
-			print p1,p2
 
 		self.p1 = p1
 		self.p2 = p2

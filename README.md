@@ -63,7 +63,7 @@ Always try to get a solution with O(N) time complexity within O(1) space
 
 ### Chapter 4 - Trees and Graphs
 
-1. BFS and DFS are the most used algorithms in Trees to solve problems
+1. BFS is level wise traversal and DFS is branch wise traversal.
 
 2. Recursive Traversal of tree is very useful for checking if conditions hold all over the tree
 
@@ -72,6 +72,14 @@ Always try to get a solution with O(N) time complexity within O(1) space
 4. 
 
 ### Chapter 5 - Bit Manipulation
+
+1. Bitwise left shift = multiplication by 2
+
+2. Bitwise right shift = division by 2
+
+3. Test if a bit is set or not by left shifting 1 to that many positions and performing a bitwise and with the resulting number
+
+4. Flip a bit by performing a bitwise xor on the number and 1 left shifted to that many positions.
 
 
 ### Chapter 6 - Math and Logic
