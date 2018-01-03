@@ -13,7 +13,9 @@ I am simultaneously solving problems from Codefights interview track so I can ap
 
 ## Tricks I learned
 
-## Rule of thumb
+These are some tips and tricks I have picked up from CTCI book and by reading solutions elsewhere.
+
+### Rule of thumb
 Always try to get a solution with O(N) time complexity within O(1) space
 
 ### Chapter 1 - Strings and Arrays
