@@ -2,6 +2,9 @@
 
 
 Why is StringBuilder more efficient than String concatenation?
+
+Answer: String concatenation uses more memory and time because JVM creates a new string, copies all characters from second string and assigns the new string to the original string. StringBuilder uses character arrays to do the same thing.
+
 What are classes, objects? (and the difference between the two)
 What is instantiation?
 What is a method (as opposed to, say, a C function)?
