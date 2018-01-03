@@ -8,7 +8,7 @@ int main(){
 	cin >> word;
 	int bitvec = 0;
 	bool flag = true;
-	// this is essentially counting number of characters in the string. setting the bits to zero means that the character appears even number of time. 1 means odd.
+	// this is essentially counting number of characters in the string. setting the bits to 0 means that the character appears even number of time. 1 means odd.
 	for (int i = 0; i < word.length(); ++i){
 		int index = word[i] - 'a';
 		int mask = 1 << index;

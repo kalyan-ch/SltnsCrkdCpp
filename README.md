@@ -67,21 +67,87 @@ Always try to get a solution with O(N) time complexity within O(1) space
 
 2. Recursive Traversal of tree is very useful for checking if conditions hold all over the tree
 
-3. Inorder traversal of Binary Search Tree is a sorted array of elements
+3. Inorder DFS traversal of Binary Search Tree is a sorted array of elements
 
-4. 
+4. Shortest Path - Djikstra's
+
+5. Minimum Spanning Tree - Prim / Kruskal
+
+6. Inorder traversal without recursion or stack - Morris tree traversal. Works by adding the next node of traversal to the leaf node.
 
 ### Chapter 5 - Bit Manipulation
 
-1. Bitwise left shift = multiplication by 2
+1. Bitwise left shift = multiplication by 2^n
 
-2. Bitwise right shift = division by 2
+2. Bitwise right shift = division by 2^n
 
-3. Test if a bit is set or not by left shifting 1 to that many positions and performing a bitwise and with the resulting number
+3. Test kth bit - n & (1 << k)
 
-4. Flip a bit by performing a bitwise xor on the number and 1 left shifted to that many positions.
+4. Toggle kth bit - n = n ^ (1 << k)
+
+5. Get lowest set bit - n & -n
+
+6. Get lowest unset bit - ~n & (n+1)
+
+7. Swap values x & y 1. x = x ^ y 2. y = x ^ y 3. x = x ^ y
 
 
 ### Chapter 6 - Math and Logic
+
+1. Prime numbers - Sieve of Eratosthenes
+
+2. 
+
+# System Design Questions
+
+## System Design - The Process
+
+1. Listen and gather requirements carefully
+
+2. 
+
+## System Design - Scalability
+
+### Part 1 - Clones
+
+1. A scalable web service has many different application servers that serve thousands or even millions of requests at a time.
+
+2. Every server contains exactly the same codebase and does not store any user-related info or sessions on it's HD
+
+3. An external database or cache contains the session data and the servers need to query for data
+
+4. A code change can be deployed across multiple servers by tools like Capistrano 
+
+### Part 2 - Database
+
+1. If we implement the above architecture and use an RDBMS database like MySQL. The web service keeps getting slower.
+
+2. Denormalization will improve the performance of SQL queries but all the joins need to happen in application code.
+
+3. A very good alternative is a NoSQL database - MongoDB, Cassandra etc.
+
+4. Even then, the application gets slower eventually. For this we need cache.
+
+### Part 3 - Cache
+
+1. Cache means in-memory caches like Redis or Memcached. Not file based cache.
+
+2. A cache is a simple key value storage. Buffers between application layer and data storage. 
+
+3. Application should first try to read the data from cache. If it's not there then read from data storage and make a copy on cache (for future reqs).
+
+4. An issue with above cache implementation is expiration. When one piece of data changes you need to delete all cached queries related to that data piece.
+
+5. Alternative approach is to consider data as objects. Store data itself as objects inside cache and when something changes the objects can be discarded instead of queries. Examples of objects to store in cache: user sessions, fully rendered blog articles, user - friend relationships etc.
+
+### Part 4 - Asynchronism
+
+1. Async means that the resources will not stop all operations until a specific job is done. Instead they are constantly checking if that job is done and will report when it is done.
+
+2. Some websites process all dynamic content in advance and store them as static content (HTML). This will allow users to access the features without much delay.
+
+3. Another way of doing things is to maintain a job queue and ask resources to check for the specific job's completion status.
+
+
 
 
