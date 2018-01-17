@@ -93,7 +93,7 @@ Always try to get a solution with O(N) time complexity within O(1) space
 
 7. Swap values x & y 1. x = x ^ y 2. y = x ^ y 3. x = x ^ y
 
-8. x % 2^i^ = x & (2^i^ -1)
+8. x % 2<sup>i</sup> = x & (2<sup>i</sup> -1)
 
 
 ### Chapter 6 - Math and Logic
