@@ -100,6 +100,29 @@ Always try to get a solution with O(N) time complexity within O(1) space
 
 2. 
 
+### Regular Expressions
+
+Rule - Write regexes as specific as possible
+
+1. \d - match any digit 0-9
+2. abc... - letters
+3. def... - numbers
+4. \D - any non-digit character
+5. . - any character
+6. \. - period
+7. [abc] - only a,b or c
+8. [^abc] - not a,b nor c
+9. [0-9] - all digits between 0 and 9 (incl)
+10. [a-g] - all chars between a and g (incl)
+11. \w - any alphanumeric character
+12. \W - any non-alphanumeric character
+13. {m} - m repetitions of a character
+14. {m,n} - m to n repetitions
+15. \s - any whitespace char
+16. \S - any non-whitespace char
+17. (abc) - groups
+18. (a(bc)) - sub groups
+
 # System Design Questions
 
 ## System Design - The Process
@@ -151,5 +174,28 @@ Always try to get a solution with O(N) time complexity within O(1) space
 3. Another way of doing things is to maintain a job queue and ask resources to check for the specific job's completion status.
 
 
+# SQL
+
+## Joins
+
+1. Inner Join - Common records of A and B
+2. Left Join - All records of A and common records of A and B
+3. Right Join - All records of B and common records of A and B
+4. Full Join - All records of A and B (A+B)
+5. Cross Join - All records of A and B (A * B -  Cartesian product)
+
+# Questions to ask the interviewer
+
+1. What is the breakdown of a developer's day, e.g. how much time for support or troubleshooting, how much time for coding, analysing requirements, etc.?
+
+2. Do you allow time for peer reviews of code?
+
+3. How is a code review done at your company?
+
+4. Do you have a standard template for estimating development effort for new work to make sure nothing is overlooked?
+
+5. Does your company allow its employees to work from home?
+
+6. What gear will be provided for me to work on? Will that have administrative priviliges?
 
 
