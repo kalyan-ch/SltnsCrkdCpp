@@ -127,9 +127,31 @@ Rule - Write regexes as specific as possible
 
 ## System Design - The Process
 
-1. Listen and gather requirements carefully
-
-2. 
+1. Listen and gather requirements carefully.
+    * important to identify classes and actions
+    * also to identify relationships between them
+2. Ask questions to clarify users and constraints. 
+    * Who is going to use it?
+    * How are they going to use it?
+    * How many users are there?
+    * What does the system do?
+    * What are the inputs and outputs of the system?
+    * How much data do we expect to handle?
+    * How many requests per second do we expect?
+    * What is the expected read to write ratio?
+3. Create high level design
+    * draw the components and relationships
+    * try to validate them using tests
+4. Add more details to components
+    * data structures to be used
+    * algorithms to use and their complexity
+    * database schema
+5. Scale the design
+    * identify bottlenecks and address them
+    * horizontal vs vertical scaling to solve problems
+    * database sharding?
+    * load balancer in the case of horizontal scaling
+    * Caching?
 
 ## System Design - Scalability
 
